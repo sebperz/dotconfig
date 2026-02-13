@@ -393,6 +393,7 @@ binds {
     Mod+B hotkey-overlay-title="Open Brave" { spawn "brave-browser"; }
     Mod+P hotkey-overlay-title="Open Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "toggle"; }
     Mod+Ctrl+P hotkey-overlay-title="Open Wallpaper Selector" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaper" "random"; }
+    Mod+X hotkey-overlay-title="Open Session Menu" { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "sessionMenu" "toggle"; }
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).

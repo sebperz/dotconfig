@@ -71,10 +71,43 @@ vim.keymap.set('n', '<C-S-k>', '<C-w>K', { desc = 'Move window to the upper' })
 vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
 
 -- Close current buffer
-vim.keymap.set('n', '<leader>x', ':bdelete<CR>', { desc = 'Close [X] buffer', silent = true })
+vim.keymap.set(
+    'n',
+    '<leader>x',
+    ':bdelete<CR>',
+    { desc = 'Close [X] buffer', silent = true }
+)
 
 -- Terminal mode window navigation
-vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w>h', { desc = 'Move focus to the left window' })
-vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w>j', { desc = 'Move focus to the lower window' })
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w>k', { desc = 'Move focus to the upper window' })
-vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w>l', { desc = 'Move focus to the right window' })
+vim.keymap.set(
+    't',
+    '<C-h>',
+    '<C-\\><C-n><C-w>h',
+    { desc = 'Move focus to the left window' }
+)
+vim.keymap.set(
+    't',
+    '<C-j>',
+    '<C-\\><C-n><C-w>j',
+    { desc = 'Move focus to the lower window' }
+)
+vim.keymap.set(
+    't',
+    '<C-k>',
+    '<C-\\><C-n><C-w>k',
+    { desc = 'Move focus to the upper window' }
+)
+vim.keymap.set(
+    't',
+    '<C-l>',
+    '<C-\\><C-n><C-w>l',
+    { desc = 'Move focus to the right window' }
+)
+
+-- Leap.nvim - Helix-style "goto word" motion
+vim.keymap.set(
+    { 'n', 'x', 'o' },
+    'gw',
+    '<Plug>(leap)',
+    { desc = '[G]o to [W]ord' }
+)
