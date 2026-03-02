@@ -1,0 +1,176 @@
+# Yo Theme for Yazi
+# Based on the Helix theme by Michael McClintock <michael.mcclintock@hey.com>
+# License: MIT
+# https://github.com/mrmcc3/yo-theme-helix
+
+# Flavor
+# [flavor]
+# dark = "yo"
+# light = "yo"
+
+# App overall background
+[app]
+overall = { bg = "#191919" }
+
+# Manager (file list)
+[mgr]
+# Background fill for the entire manager area
+bg = "#191919"
+
+# Header (current path, tabs)
+header = { fg = "#eeeeee", bg = "#2a2a2a" }
+
+# Footer / Status line
+footer = { fg = "#b4b4b4", bg = "#2a2a2a" }
+
+# Current working directory
+cwd = { fg = "#eeeeee", bold = true }
+
+# Hover state (current selection)
+hovered = { fg = "#eeeeee", bg = "#3a3a3a", bold = true }
+
+# Selected files (marked)
+selected = { fg = "#191919", bg = "#eeeeee" }
+
+# Selected and hovered
+selected_hovered = { fg = "#191919", bg = "#ae8c7e", bold = true }
+
+# Preview area
+preview = { bg = "#191919" }
+
+# Find highlight
+find_keyword = { fg = "#191919", bg = "#ff801f", bold = true }
+find_position = { fg = "#191919", bg = "#3b9eff", bold = true }
+
+# Marker for selected files
+marker_selected = { fg = "#eeeeee", bg = "#eeeeee" }
+
+# Marker for copied files
+marker_copied = { fg = "#33b074", bg = "#33b074" }
+marker_cut = { fg = "#ec5d5e", bg = "#ec5d5e" }
+
+# Tab styling
+tab_active = { fg = "#191919", bg = "#eeeeee", bold = true }
+tab_inactive = { fg = "#b4b4b4", bg = "#2a2a2a" }
+
+# Border lines
+border_style = { fg = "#484848" }
+
+# Count badges
+count_copied = { fg = "#191919", bg = "#33b074", bold = true }
+count_cut = { fg = "#191919", bg = "#ec5d5e", bold = true }
+count_selected = { fg = "#191919", bg = "#eeeeee", bold = true }
+
+# Status bar
+[status]
+separator_style = { fg = "#484848", bg = "#2a2a2a" }
+
+# Mode indicators
+mode_normal = { fg = "#191919", bg = "#eeeeee", bold = true }
+mode_select = { fg = "#191919", bg = "#9a5cd0", bold = true }
+mode_unset = { fg = "#191919", bg = "#ec5d5e", bold = true }
+
+# Progress bar
+progress_label = { fg = "#eeeeee", bold = true }
+progress_normal = { fg = "#3b9eff", bg = "#2a2a2a" }
+progress_error = { fg = "#ec5d5e", bg = "#2a2a2a" }
+
+# Permissions
+permissions_t = { fg = "#33b074" }  # Executable/True
+permissions_r = { fg = "#3b9eff" }  # Read
+permissions_w = { fg = "#ec5d5e" }  # Write
+permissions_x = { fg = "#ff801f" }  # Execute
+permissions_s = { fg = "#9a5cd0" }  # Special/setuid
+permissions_d = { fg = "#606060" }  # Dash/no permission
+
+# Input prompts (rename, create, etc.)
+[input]
+border = { fg = "#484848" }
+title = { fg = "#eeeeee", bold = true }
+value = { fg = "#b4b4b4" }
+selected = { bg = "#3a3a3a" }
+
+# Completion menu
+[input.completion]
+border = { fg = "#484848" }
+active = { fg = "#eeeeee", bg = "#3a3a3a", bold = true }
+inactive = { fg = "#b4b4b4" }
+
+# Help menu
+[help]
+on = { fg = "#33b074", bold = true }
+run = { fg = "#eeeeee" }
+desc = { fg = "#7b7b7b" }
+hovered = { fg = "#eeeeee", bg = "#3a3a3a", bold = true }
+footer = { fg = "#b4b4b4", bg = "#2a2a2a" }
+
+# Which key popup
+[which]
+mask = { bg = "#111111" }
+cand = { fg = "#ae8c7e" }
+rest = { fg = "#606060" }
+next = { fg = "#ff801f" }
+prev = { fg = "#ff801f" }
+desc = { fg = "#7b7b7b" }
+
+# Confirm prompts (delete, trash, etc.)
+[confirm]
+border = { fg = "#484848" }
+title = { fg = "#eeeeee", bold = true }
+content = { fg = "#b4b4b4" }
+list = { fg = "#eeeeee" }
+btn_yes = { fg = "#191919", bg = "#ec5d5e", bold = true }
+btn_no = { fg = "#191919", bg = "#606060", bold = true }
+btn_labels = { fg = "#eeeeee" }
+
+# Notification messages
+[notify]
+title_info = { fg = "#3b9eff", bold = true }
+title_warn = { fg = "#ff801f", bold = true }
+title_error = { fg = "#ec5d5e", bold = true }
+
+# Picker (file picker, etc.)
+[pick]
+border = { fg = "#484848" }
+active = { fg = "#eeeeee", bg = "#3a3a3a", bold = true }
+inactive = { fg = "#b4b4b4" }
+
+# File type colors
+[filetype]
+rules = [
+    # Directories
+    { url = "*/", fg = "#3b9eff", bold = true },
+    
+    # Images
+    { mime = "image/*", fg = "#9a5cd0" },
+    
+    # Videos
+    { mime = "video/*", fg = "#ff801f" },
+    { mime = "audio/*", fg = "#ff801f" },
+    
+    # Archives
+    { mime = "application/zip", fg = "#ec5d5e" },
+    { mime = "application/x-tar", fg = "#ec5d5e" },
+    { mime = "application/x-bzip", fg = "#ec5d5e" },
+    { mime = "application/x-bzip2", fg = "#ec5d5e" },
+    { mime = "application/x-7z-compressed", fg = "#ec5d5e" },
+    { mime = "application/x-rar", fg = "#ec5d5e" },
+    { mime = "application/gzip", fg = "#ec5d5e" },
+    
+    # Documents
+    { mime = "application/pdf", fg = "#ec5d5e" },
+    { mime = "text/*", fg = "#b4b4b4" },
+    
+    # Executables
+    { is = "exec", fg = "#33b074", bold = true },
+    
+    # Symlinks
+    { is = "link", fg = "#3b9eff" },
+    { is = "orphan", fg = "#ec5d5e", crossed = true },
+    
+    # Hidden files
+    { url = ".*", fg = "#7b7b7b" },
+    
+    # Fallback
+    { url = "*", fg = "#b4b4b4" }
+]

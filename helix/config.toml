@@ -1,1 +1,54 @@
-theme = "cyberdream"
+# theme = "cyberdream"
+theme = "wolf-alabaster-dark-mono"
+
+[keys.normal]
+"{" = "goto_prev_paragraph"
+"}" = "goto_next_paragraph"
+C-j = "save_selection"
+C-s = ":write"
+";" = "command_mode"
+S-v = ["select_mode", "goto_line_end", "normal_mode"]
+
+C-e = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo -e "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+
+C-r = ":reload"
+
+[editor]
+scrolloff = 15
+auto-format = true
+jump-label-alphabet = "jfkdlsa;ghurieowqptymvnbcxz"
+# Show currently open buffers, only when more than one exists.
+bufferline = "multiple"
+# Highlight all lines with a cursor
+# cursorline = true
+# Use relative line numbers
+line-number = "relative"
+# Show a ruler at column 120
+# rulers = [80]
+# Force the theme to show colors
+true-color = true
+end-of-line-diagnostics = "hint"
+ 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+center = ["file-modification-indicator", "diagnostics"]
+right = ["selections", "position", "total-line-numbers"]
+
+[editor.inline-diagnostics]
+cursor-line = "error" # Show inline diagnostics when the cursor is on the line
+# other-lines = "hint" # Don't expand diagnostics unless the cursor is on the line
+other-lines = "disable" # Don't expand diagnostics unless the cursor is on the line
