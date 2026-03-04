@@ -8,6 +8,7 @@ C-j = "save_selection"
 C-s = ":write"
 ";" = "command_mode"
 S-v = ["select_mode", "goto_line_end", "normal_mode"]
+C-n = "repeat_last_motion"
 
 C-e = [
   ':sh rm -f /tmp/unique-file',
