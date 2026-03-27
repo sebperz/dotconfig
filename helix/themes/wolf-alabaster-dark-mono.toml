@@ -70,7 +70,7 @@ error = { fg = "error-red", modifiers = ["bold"] }
 
 [palette]
 # Dark monochromatic palette
-comment-grey = "#777777"          # Grey - comments
+comment-grey = "#999999"          # Grey - comments
 punctuation-dark = "#555555"      # Dark grey - punctuation
 string-bg = "#2A2A2A"             # Dark grey - strings/constants background
 string-bg-dark = "#333333"        # Slightly lighter grey - escape sequences
