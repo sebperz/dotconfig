@@ -1,0 +1,155 @@
+# sebperz-mono.toml
+#
+# This theme use Wolf's Alabaster mono theme as the base.
+# You can find it here: https://github.com/wolf/alabaster-for-helix
+#
+# THEME: Uses a grey scale for all the code.
+# Accent color: Orange
+# Selection color: Blue
+# Errors color: Red
+# Diff colors: Orange, Red and Green
+
+# GENERAL - Diagnostics (LSP errors/warnings)
+warning = { fg = "highlight" }
+error = { fg = "error-red", modifiers = ["bold"] }
+info = { fg = "definition" }
+hint = { fg = "punctuation" }
+diagnostic = { underline = { style = "curl" } }
+
+# UI - Interface elements
+"ui.background" = { bg = "bg" }
+"ui.text" = { fg = "fg" }
+"ui.text.focus" = { fg = "active", modifiers = ["bold"] }
+
+"ui.cursor" = { bg = "cursor-secondary", fg = "bg" }
+"ui.cursor.primary" = { bg = "active", fg = "bg" }
+"ui.cursor.primary.insert" = { bg = "active", fg = "bg" }
+"ui.cursor.match" = { fg = "active", underline = { style = "line" } }
+"ui.match" = { fg = "active", underline = { style = "line" } }
+"ui.cursorline.primary" = { bg = "cursorline-primary" }
+"ui.cursorline" = { bg = "cursorline" }
+"ui.cursorcolumn" = { bg = "cursorline" }
+
+"ui.gutter" = { bg = "bg" }
+
+"ui.selection" = { bg = "selection", fg = "fg" }
+"ui.selection.primary" = { bg = "selection-primary", fg = "fg" }
+
+"ui.linenr" = { fg = "punctuation" }
+"ui.linenr.selected" = { fg = "active", modifiers = ["bold"] }
+
+"ui.statusline" = { fg = "fg", bg = "panel" }
+"ui.statusline.inactive" = { fg = "punctuation", bg = "panel" }
+
+"ui.bufferline.active" = { fg = "fg", bg = "bg", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "bg" }
+"ui.bufferline" = { fg = "punctuation", bg = "panel" }
+
+"ui.menu" = { fg = "fg", bg = "panel" }
+"ui.menu.selected" = { fg = "bg", bg = "active" }
+
+"ui.popup" = { fg = "fg", bg = "panel" }
+"ui.popup.info" = { fg = "fg", bg = "panel" }
+"ui.window" = { fg = "punctuation" }
+"ui.help" = { fg = "fg", bg = "bg" }
+
+"ui.virtual.jump-label" = { fg = "jump-label", modifiers = ["bold"] }
+
+"ui.virtual" = { fg = "inlay-hint" }
+"ui.virtual.inlay-hint" = { fg = "inlay-hint" }
+"ui.virtual.ruler" = { bg = "cursorline" }
+
+"diagnostic.error" = { underline = { color = "error-red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "highlight", style = "curl" } }
+"diagnostic.info" = { underline = { color = "definition", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "punctuation", style = "curl" } }
+"diagnostic.deprecated" = { fg = "punctuation", modifiers = ["crossed_out"] }
+
+# SYNTAX HIGHLIGHTING - MONOCHROMATIC DARK VARIANT
+# Almost entirely grayscale with subtle backgrounds for strings/constants
+
+"string" = { fg = "fg", bg = "string-bg" }
+"string.regexp" = { fg = "fg", bg = "string-bg" }
+"string.special" = { fg = "fg", bg = "string-bg-dark" }
+
+"constant" = { fg = "fg", bg = "string-bg" }
+"constant.numeric" = { fg = "fg", bg = "string-bg" }
+"constant.character" = { fg = "fg", bg = "string-bg" }
+"constant.builtin" = { fg = "fg", bg = "string-bg" }
+
+"comment" = { fg = "comment-grey" }
+"comment.line" = { fg = "comment-grey" }
+"comment.block" = { fg = "comment-grey" }
+
+"function" = { fg = "fg" }
+"function.builtin" = { fg = "fg" }
+"function.method" = { fg = "fg" }
+"function.call" = { fg = "fg" }
+"function.method.call" = { fg = "fg" }
+
+"constructor" = { fg = "fg" }
+"type" = { fg = "fg" }
+"type.definition" = { fg = "fg" }
+"type.builtin" = { fg = "fg" }
+
+"keyword" = { fg = "fg" }
+"keyword.control" = { fg = "fg" }
+"keyword.operator" = { fg = "fg" }
+"variable" = { fg = "fg" }
+"variable.parameter" = { fg = "fg" }
+"variable.builtin" = { fg = "fg" }
+
+"punctuation" = { fg = "punctuation-dark" }
+"punctuation.bracket" = { fg = "punctuation-dark" }
+"punctuation.delimiter" = { fg = "punctuation-dark" }
+
+"operator" = { fg = "punctuation-dark" }
+
+"tag" = { fg = "fg" }
+"tag.error" = { fg = "error-red", underline = { style = "line" } }
+"attribute" = { fg = "fg" }
+"namespace" = { fg = "fg" }
+"label" = { fg = "constant" }
+
+"markup.heading" = { fg = "fg", modifiers = ["bold"] }
+"markup.list" = { fg = "fg" }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.link.url" = { fg = "fg", bg = "string-bg", modifiers = ["underlined"] }
+"markup.link.text" = { fg = "fg" }
+"markup.quote" = { fg = "comment-grey" }
+"markup.raw" = { fg = "fg", bg = "string-bg" }
+
+"diff.plus" = { fg = "diff-green" }
+"diff.minus" = { fg = "diff-red" }
+"diff.delta" = { fg = "diff-orange" }
+
+[palette]
+# Dark background core colors
+fg = "#CECECE"
+bg = "#101010"
+
+# Supporting colors
+punctuation = "#8C8C8C"
+selection = "#084C61"
+selection-primary = "#084C61"
+active = "#D96C06"
+cursor-secondary = "#D96C06"
+highlight = "#D96C06"
+error-red = "#8E151F"
+panel = "#252526"
+cursorline = "#D96C06"
+cursorline-primary = "#D96C06"
+jump-label = "#D96C06"
+inlay-hint = "#0A8754"
+
+# Diff colors
+diff-green = "#0A8754"
+diff-red = "#8E151F"
+diff-orange = "#D96C06"
+
+# Mono-specific colors
+comment-grey = "#777777"
+punctuation-dark = "#555555"
+string-bg = "#2A2A2A"
+string-bg-dark = "#333333"

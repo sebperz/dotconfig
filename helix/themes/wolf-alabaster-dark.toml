@@ -32,8 +32,8 @@ cursor-secondary = "#7A5B30"  # Dimmed gold - secondary cursors (multi-cursor)
 highlight = "#D96C06"    # Orange - search, warnings
 error-red = "#8E151F"    # Yellow - errors (use comment color for visibility)
 panel = "#252526"        # Slightly lighter grey - UI panels, menus, popups
-cursorline = "#141819"   # Subtle highlight - secondary cursorline
-cursorline-primary = "#1A2022"  # Primary cursorline (tonsky's original)
+cursorline = "#D96C06"   # Subtle highlight - secondary cursorline
+cursorline-primary = "#D96C06"  # Primary cursorline (tonsky's original)
 jump-label = "#D96C06"   # Bright orange - jump destinations
 inlay-hint = "#4A7090"   # Dimmed blue - virtual text (type hints)
 

@@ -1,5 +1,5 @@
 # theme = "cyberdream"
-theme = "wolf-alabaster-dark-mono"
+theme = "sebperz_mono"
 
 [keys.normal]
 "{" = "goto_prev_paragraph"
@@ -23,6 +23,11 @@ C-l = "jump_view_right"
 
 C-r = ":reload"
 
+[keys.normal.g.o]
+t = ":append-output go test"
+r = ":append-output go run ."
+e = ":insert-output echo 'if err != nil { return err }'"
+
 [editor]
 scrolloff = 15
 auto-format = true
@@ -42,7 +47,7 @@ end-of-line-diagnostics = "hint"
 [editor.cursor-shape]
 insert = "bar"
 normal = "block"
-select = "underline"
+select = "block"
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control", "file-name"]
