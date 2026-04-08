@@ -9,6 +9,8 @@ fi
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
     PATH="$HOME/.local/bin:$HOME/bin:$PATH"
 fi
+
+# export
 export PATH
 export EDITOR=hx
 
@@ -34,4 +36,7 @@ export PATH=$PATH:/usr/local/go/bin
 # gopls
 export PATH="$PATH:$HOME/go/bin"
 
+# alias
+alias la="ls -al"
+alias ll="ls -l"
 alias e='hx "$(find | fzf --preview "cat {}")"'
